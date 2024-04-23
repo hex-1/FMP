@@ -1,0 +1,68 @@
+html{
+	height: 100hv;
+	min-height: 100hv;
+	max-height: 100hv;
+}
+
+body {
+background: rgb(153,153,153);
+background: linear-gradient(132deg, rgba(153,153,153,1) 0%, rgba(255,0,0,1) 100%);
+}
+img, Button {
+  border-radius: 10%;
+}
+
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+button:disabled{
+	background-color: #ccc;   color: #666;   cursor: not-allowed; 
+}
+
+h1{
+	text-align: center;
+	color: white;
+}
+
+#playerTable{
+    transition: opacity 1s;
+}
+#weaponTable{
+    transition: opacity 1s;
+}
+#roomTable{
+    transition: opacity 1s;
+}
+.tableImg{
+	transition: height 1s;
+}
+#selectionTable{
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+#titleText{
+	
+	animation: fadeInAnimation ease 2s;
+	animation-iteration-count: 999;
+	animation-fill-mode: forwards;
+	color: white;
+	text-align: center;
+}
+
+@keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+	
+        }
+		
+#SelectionText{
+	opacity: 0;

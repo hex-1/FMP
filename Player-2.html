@@ -1,0 +1,75 @@
+<!--
+
+pb is player button
+pi is player image
+wb is weapon button
+wi is weapon image
+rb is room button
+ri is room image
+ -->
+<!doctype html>
+<script src="node_modules/osc-js/lib/osc.min.js"></script>
+<html>
+	<head>
+		<title>ALT-eriour Motives</title>
+		<link rel="stylesheet" href="Player-2.css">
+		<h3 hidden id= "playerNo">2</h3>
+		<h1> Player: 2</h1>
+	</head>
+	<body>
+	<table>
+		<tr>
+			<th> 
+				Your Cards<br>
+				<button id = "hide">
+				<img id="card1", class = "tableImg", src="">
+				<img id="card2", class = "tableImg", src="">
+				<img id="card3", class = "tableImg", src="">
+			</th>
+			
+		</tr>
+	<div id = "selections" hidden>
+		<h1 id = "titleText">Please Make your Selection</h1>
+		<h1 id = "SelectionText">Your Selection:</h1>
+				<table class="center", id = "playerTable">
+					<tr>
+						<th><button type="button",id="pb1"><img id="pi1", class = "tableImg", src="Assets\Players\1.png" onclick="DisableP1()"></button></th>
+						<th><button type="button",id="pb2"><img id="pi2", class = "tableImg", src="Assets\Players\2.png" onclick="DisableP2()"></button></th>
+						<th><button type="button",id="pb3"><img id="pi3", class = "tableImg", src="Assets\Players\3.png" onclick="DisableP3()"></button></th>
+						<th><button type="button",id="pb4"><img id="pi4", class = "tableImg", src="Assets\Players\4.png" onclick="DisableP4()"></button></th>
+
+					</tr>
+				</table>
+				<br>
+				<table class="center", id = "selectionTable">
+					<tr>
+						<th><img id="selectionTableA"></th>
+						<th><img id="selectionTableB"></th>
+						<th><img id="selectionTableC"></th>
+					</tr>
+				</table>
+				<br>
+				<table class="center", id = "weaponTable">
+					<tr>
+						<th><button type="button",id="wb1"><img id="wi1", src="Assets\Weapons\1.png" onclick="DisableW1()"></button></th>
+						<th><button type="button",id="wb2"><img id="wi2", src="Assets\Weapons\2.png" onclick="DisableW2()"></button></th>
+						<th><button type="button",id="wb3"><img id="wi3", src="Assets\Weapons\3.png" onclick="DisableW3()"></button></th>
+						<th><button type="button",id="wb4"><img id="wi4", src="Assets\Weapons\4.png" onclick="DisableW4()"></button></th>
+						<th><button type="button",id="wb5"><img id="wi5", src="Assets\Weapons\5.png" onclick="DisableW5()"></button></th>
+						<th><button type="button",id="wb6"><img id="wi6", src="Assets\Weapons\6.png" onclick="DisableW6()"></button></th>
+					</tr>
+				</table>
+				<br>
+				<table class="center", id = "roomTable">
+					<tr>
+						<th><button type="button",id="rb1"><img id="ri1", src="Assets\Rooms\1.png" onclick="DisableR1()"></button></th>
+						<th><button type="button",id="rb2"><img id="ri2", src="Assets\Rooms\2.png" onclick="DisableR2()"></button></th>
+						<th><button type="button",id="rb3"><img id="ri3", src="Assets\Rooms\3.png" onclick="DisableR3()"></button></th>
+						<th><button type="button",id="rb4"><img id="ri4", src="Assets\Rooms\4.png" onclick="DisableR4()"></button></th>
+						<th><button type="button",id="rb5"><img id="ri5", src="Assets\Rooms\5.png" onclick="DisableR5()"></button></th>
+					</tr>
+				</table>
+	</div>
+	</body>
+	<script src="Players.js" ></script>
+</html>
