@@ -182,7 +182,7 @@ function disableRooms(){
 
 
 var osc = new OSC();
-osc.open({host : '192.168.220.219'}); // connect by default to ws://localhost:8080
+osc.open({host : '10.18.22.247'}); // connect by default to ws://localhost:8080
 
 
 
