@@ -182,7 +182,7 @@ function disableRooms(){
 
 
 var osc = new OSC();
-osc.open({host : '10.18.22.247'}); // connect by default to ws://localhost:8080
+osc.open({host : '192.168.10.101'}); // connect by default to ws://localhost:8080
 
 
 
@@ -192,7 +192,7 @@ function sendOSCPlayer(user,value) {
 }
 
 
-osc.on('/Players/1', message => {
+osc.on('/Players/'+playerNum, message => {
   console.log(message.args); // prints the message arguments
   if(message.args == 1) //into standby
   {
@@ -208,7 +208,7 @@ osc.on('/Players/1', message => {
   {
 	  document.getElementById("selections").style.visibility = "visible";
   }
-  if(message.args == 4) //out of standby
+  if(message.args == 4) //Into Pick
   {
 	  document.getElementById("playerTable").style.visibility = "visible";
 	  document.getElementById("statusText").style.visibility = "hidden";
@@ -223,6 +223,30 @@ osc.on('/Players/1', message => {
 	document.getElementById("roomTable").addEventListener('transitionend', () => populateSelectionTable());
   }
 });
+
+var loc1 = false;
+var loc2 = false;
+var loc3 = false;
+osc.on('/Players/'+playerNum+'/Cards/', message => {
+
+	 if(loc1 == false)
+  {
+	  document.getElementById("card1").src = message.args;
+	  loc1 = true;
+  }
+    else if(loc2 == false)
+  {
+	  document.getElementById("card2").src = message.args;
+	  loc2 = true;
+  }
+    else if(loc3 == false) //room
+  {
+	  document.getElementById("card3").src = message.args;
+	  loc3 = true;
+  }
+});
+
+
 function populateSelectionTable()
 {
 	const collection = document.getElementsByClassName("tableImg");
@@ -236,7 +260,29 @@ function populateSelectionTable()
 	document.getElementById("selectionTableC").src="Assets/weapons/"+SelectedWeapon+".png";
 	document.getElementById("SelectionText").style.opacity = "1";
 }
-	
+
+var playerCards = 1;	
+var defaultWidth = document.getElementById("card1").style.width;
+function playerCardsToggle()
+{
+	if (playerCards == 1)
+	{
+		document.getElementById("card1").style.width = "0";
+		document.getElementById("card2").style.width = "0";
+		document.getElementById("card3").style.width = "0";
+		playerCards = 0;
+		console.log(playerCards);
+	}
+	else if (playerCards == 0)
+	{
+		document.getElementById("card1").style.width = defaultWidth;
+		document.getElementById("card2").style.width = defaultWidth;
+		document.getElementById("card3").style.width = defaultWidth;
+		playerCards = 1;
+		console.log(playerCards);
+	}
+}
+
 
 
 

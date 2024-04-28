@@ -17,17 +17,25 @@ ri is room image
 		<h1> Player: 2</h1>
 	</head>
 	<body>
-	<table>
+	
+	<table id="playersCards">
 		<tr>
-			<th> 
-				Your Cards<br>
-				<button id = "hide">
-				<img id="card1", class = "tableImg", src="">
-				<img id="card2", class = "tableImg", src="">
-				<img id="card3", class = "tableImg", src="">
-			</th>
-			
+				<th><h1>Your Cards</h1></th>
 		</tr>
+		<tr>
+				<th><button onclick="playerCardsToggle()">Show/Hide</button></th>
+		</tr>
+		<tr>
+				<th><img id="card1", class = "tableImg", src=""></th>			
+		</tr>
+		<tr>
+				<th><img id="card2", class = "tableImg", src=""></th>			
+		</tr>
+		<tr>
+
+				<th><img id="card3", class = "tableImg", src=""></th>			
+		</tr>
+	</table>
 	<div id = "selections" hidden>
 		<h1 id = "titleText">Please Make your Selection</h1>
 		<h1 id = "SelectionText">Your Selection:</h1>

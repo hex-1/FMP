@@ -1,5 +1,5 @@
 var osc = new OSC();
-osc.open({host : '10.18.22.247'}); // connect by default to ws://localhost:8080
+osc.open({host : '192.168.10.101'}); // connect by default to ws://localhost:8080
 
 function sendOSChost(value) {
 	var message = new OSC.Message('/tech/',value);
@@ -10,6 +10,12 @@ osc.on('/Tech/state', message => {
 	console.log(message.args); // prints the message arguments
 	document.getElementById("state").innerHTML = message.args;
 });
+
+osc.on('/Tech/order', message => {
+	console.log(message.args); // prints the message arguments
+	//document.getElementById("state").innerHTML = message.args;
+});
+
 
 
 osc.on('/Tech/player', message => {

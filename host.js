@@ -1,6 +1,19 @@
 
 var osc = new OSC();
-osc.open({host : '192.168.220.219'}); // connect by default to ws://localhost:8080
+osc.open({host : '10.18.22.247'}); // connect by default to ws://localhost:8080
+
+
+
+function sendOSChost(value) {
+	var message = new OSC.Message('/Host/',value);
+    osc.send(message);
+	console.log("sent");
+}
+
+
+osc.on('open', () => {
+  sendOSChost(7);
+})
 
 
 osc.on('/Host/', message => {
