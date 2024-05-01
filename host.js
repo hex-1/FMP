@@ -48,15 +48,15 @@ osc.on('/Host/', message => {
 	  document.getElementById("AwnsersTableC").src = "Assets/Rooms/"+message.args.toString().slice(1,2)+".png";
   }
   //accusation data
-     if(message.args.toString().slice(0,2) == "SP") //person
+     if(message.args.toString().slice(0,2) == "AP") //person
   {
 	  document.getElementById("SuggestionTableA").src = "Assets/Players/"+message.args.toString().slice(2,3)+".png";
   }
-    if(message.args.toString().slice(0,2) == "SW") //weapon
+    if(message.args.toString().slice(0,2) == "AW") //weapon
   {
 	  document.getElementById("SuggestionTableB").src = "Assets/Weapons/"+message.args.toString().slice(2,3)+".png";
   }
-    if(message.args.toString().slice(0,2) == "SR") //room
+    if(message.args.toString().slice(0,2) == "AR") //room
   {
 	  document.getElementById("SuggestionTableC").src = "Assets/Rooms/"+message.args.toString().slice(2,3)+".png";
   }

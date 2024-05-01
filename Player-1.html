@@ -1,11 +1,12 @@
 <!--
-
 pb is player button
 pi is player image
 wb is weapon button
 wi is weapon image
 rb is room button
 ri is room image
+RC is responce card
+RCI is responce card image
  -->
 <!doctype html>
 <script src="node_modules/osc-js/lib/osc.min.js"></script>
@@ -36,9 +37,26 @@ ri is room image
 				<th><img id="card3", class = "tableImg", src=""></th>			
 		</tr>
 	</table>
-	<div id = "selections" hidden>
+	<table id="Suggestion-Response">
+		<tr>
+				<th><h2>Player</h2><h2 id="suggestionPlayerNo"></h2><h2>Is asking you about:</h2></th>
+		</tr>
+		<tr>
+			<th><button type="button",id="RC1"><img id="RCI1", class = "tableImg", src="" onclick="RespondC1()"></button></th>
+			<th><button type="button",id="RC2"><img id="RCI2", class = "tableImg", src="" onclick="RespondC2()"></button></th>
+			<th><button type="button",id="RC3"><img id="RCI3", class = "tableImg", src="" onclick="RespondC3()"></button></th>
+		</tr>
+	</table>
 		<h1 id = "titleText">Please Make your Selection</h1>
 		<h1 id = "SelectionText">Your Selection:</h1>
+				<table class="center", id = "selectionTable">
+					<tr>
+						<th><img id="selectionTableA"></th>
+						<th><img id="selectionTableB"></th>
+						<th><img id="selectionTableC"></th>
+					</tr>
+				</table>
+				<br>
 				<table class="center", id = "playerTable">
 					<tr>
 						<th><button type="button",id="pb1"><img id="pi1", class = "tableImg", src="Assets\Players\1.png" onclick="DisableP1()"></button></th>
@@ -46,14 +64,6 @@ ri is room image
 						<th><button type="button",id="pb3"><img id="pi3", class = "tableImg", src="Assets\Players\3.png" onclick="DisableP3()"></button></th>
 						<th><button type="button",id="pb4"><img id="pi4", class = "tableImg", src="Assets\Players\4.png" onclick="DisableP4()"></button></th>
 
-					</tr>
-				</table>
-				<br>
-				<table class="center", id = "selectionTable">
-					<tr>
-						<th><img id="selectionTableA"></th>
-						<th><img id="selectionTableB"></th>
-						<th><img id="selectionTableC"></th>
 					</tr>
 				</table>
 				<br>
@@ -77,7 +87,6 @@ ri is room image
 						<th><button type="button",id="rb5"><img id="ri5", src="Assets\Rooms\5.png" onclick="DisableR5()"></button></th>
 					</tr>
 				</table>
-	</div>
 	</body>
 	<script src="Players.js" ></script>
 </html>
