@@ -1,0 +1,11 @@
+html{
+	height: 100hv;
+	min-height: 100hv;
+	max-height: 100hv;
+}
+
+body {
+background: rgb(153,153,153);
+background: linear-gradient(132deg, rgba(153,153,153,1) 0%, rgba(255,172,28,1) 100%);
+background-size: 200% 200%;
+}

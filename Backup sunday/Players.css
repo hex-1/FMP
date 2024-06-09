@@ -1,0 +1,100 @@
+img, Button {
+  border-radius: 10%;
+}
+img
+{
+  width:200px;
+  height:300px;
+}
+
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+button:disabled{
+	background-color: #ccc;   color: #666;   cursor: not-allowed; 
+}
+
+h1{
+	text-align: center;
+	color: white;
+}
+
+#playerTable{
+    transition: opacity 1s;
+}
+#weaponTable{
+    transition: opacity 1s;
+}
+#roomTable{
+    transition: opacity 1s;
+}
+.tableImg{
+	transition: height 1s;
+}
+#selectionTable{
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+#titleText{
+	
+	animation: fadeInAnimation ease 2s;
+	animation-iteration-count: 999;
+	animation-fill-mode: forwards;
+	color: white;
+	text-align: center;
+}
+
+#SelectionText{
+	opacity: 0;
+}
+
+
+
+#tickSheet
+{
+	margin-left:auto;
+	margin-right:7px;
+}
+
+#playersCards, tr, th
+{
+	margin-bottom:auto;
+	margin-top:0px;
+	width:470px;
+	vertical-align: top;
+}
+.c1
+{
+	width:470px;
+	text-align:center;
+	border-width:3px;
+	border-Style:solid;
+}
+.c2
+{
+	width:950px;
+	text-align:center;
+	border-width:3px;
+	border-Style:solid;
+}
+.c3
+{
+	width:470px;
+	text-align:center;
+	border-width:3px;
+	border-Style:solid;
+}
+.SmalltableImg
+{
+	height:160px;
+	width:125px;
+}
+body {
+
+overscroll-behavior-y: contain;
+
+}

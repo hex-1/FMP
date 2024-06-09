@@ -1,0 +1,47 @@
+<!doctype html>
+<script src="node_modules/osc-js/lib/osc.min.js"></script>
+<html>
+	<h1 id="currMoving">currently moving player: </h1>
+	<h1> Press esc to cancel </h1>
+	<table>
+		<tr>
+			<th><h1 id = "MoveSummery"> Player x Moved to room Y</h1></th>
+			<th><button onclick="Submit()">Submit</button></th>
+		</tr>
+	</table>
+	<table id="roomsTable">
+		<tr>
+			<th><img src="Assets/Building/TopRooms.png" id = "R1" onclick = "mr(1)"/></th>
+			<th><img src="Assets/Building/Hall2x4.png" id = "H1" onclick = "mh(1)"/></th>
+			<th><img src="Assets/Building/TopRooms.png" id = "R2" onclick = "mr(2)"/></th>
+			<th><img src="Assets/Building/Hall2x4.png" id = "H2" onclick = "mh(2)"/></th>
+			<th><img src="Assets/Building/TopRooms.png" id = "R3" onclick = "mr(3)"/></th>
+		</tr>
+		<tr>
+			<th><img src="Assets/Building/Hall7x2.png"  id = "H3" onclick = "mh(3)"/></th>
+			<th><img src="Assets/Building/Hall2x2.png" id = "H4" onclick = "mh(4)"/></th>
+			<th><img src="Assets/Building/Hall7x2.png" id = "H5" onclick = "mh(5)"/></th>
+			<th><img src="Assets/Building/Hall2x2.png" id = "H6" onclick = "mh(6)"/></th>
+			<th><img src="Assets/Building/Hall7x2.png" id = "H7" onclick = "mh(7)"/></th>
+			
+		</tr>
+		<tr>
+			<th><img src="Assets/Building/TopRooms.png" id = "R4" onclick="mr(4)"/></th>
+			<th><img src="Assets/Building/Hall2x4.png" id = "H8" onclick = "mh(8)"/></th>
+			<th><img src="Assets/Building/TopRooms.png" id = "R6" onclick="mr(6)"/></th>
+			<th><img src="Assets/Building/Hall2x4.png" id = "H9" onclick = "mh(9)"/></th>
+			<th><img src="Assets/Building/TopRooms.png" id = "R5" onclick="mr(5)"/></th>
+		</tr>
+	</table>
+	<table id="playersTable">
+		<tr>
+			<th><img src="Assets/Players/1.png" onclick = "selectp1()" id="p1"/></th>
+			<th><img src="Assets/Players/2.png" onclick = "selectp2()" id="p2"/></th>
+			<th><img src="Assets/Players/3.png" onclick = "selectp3()" id="p3"/></th>
+			<th><img src="Assets/Players/4.png" onclick = "selectp4()" id="p4"/></th>
+		</tr>
+	</table>
+	<p hidden id="dat"></p>
+	<script src="Player-Track.js" ></script>
+
+</html>

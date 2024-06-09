@@ -1,0 +1,31 @@
+<!doctype html>
+<script src="node_modules/osc-js/lib/osc.min.js"></script>
+<html>
+<head>
+<title>Tech</title>
+<link rel="stylesheet" href="tech.css">
+</head>
+<body>
+<h2>Current State:</h2><h2 id="state"></h2>
+<h2>Current Player:</h2><h2 id="player"></h2>
+<h2>Player Order:</h2><h2 id="Order"></h2>
+<h2>manual tick que size:</h2><h2 id="manQue"></h2>
+<button onclick="Next()">Next</button>
+<button onclick="Prev()">Previous</button>
+<input type="number" id ="roll">
+<button onclick="submitDiceRoll()">submit</button>
+<br>
+<table>
+	<tr>
+		<th id="PlayLoop">State</th>
+		<th id="Cards">State</th>
+	</tr>
+	<tr>
+		<th>play Loop</th>
+		<th>cards</th>
+	</tr>
+</table>
+
+</body>
+<script src="tech.js" ></script>
+</html>
